@@ -12,26 +12,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Arrays;
 
 @SpringBootApplication
-public class CategorysApplication implements CommandLineRunner {
-@Autowired
-private CategoriaRepository categoriaRepository;
-
-@Autowired
-private LivroRepository livroRepository;
+public class CategorysApplication  {
 
 
 public static void main(String[] args) {
 		SpringApplication.run(CategorysApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		Categoria cat1 = new Categoria( null, "dudu", "malah");
-		Livro livro = new Livro(null, "clena  code", "arquitertrua", "lorem", cat1);
-		cat1.getLivros().addAll(Arrays.asList(livro));
 
-		this.categoriaRepository.saveAll(Arrays.asList(cat1));
-		this.livroRepository.saveAll(Arrays.asList(livro));
-
-	}
 }
