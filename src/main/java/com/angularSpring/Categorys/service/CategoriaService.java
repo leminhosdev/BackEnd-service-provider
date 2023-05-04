@@ -1,6 +1,7 @@
 package com.angularSpring.Categorys.service;
 
 import com.angularSpring.Categorys.domain.Categoria;
+import com.angularSpring.Categorys.exceptions.ObjectNotFoundException;
 import com.angularSpring.Categorys.repositorys.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class CategoriaService {
 
     public Categoria findbyId(Long id){
         Optional<Categoria> categoria = this.categoriaRepository.findById(id);
-       return categoria.orElse(null);
+       return categoria.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado "));
 
     }
 
