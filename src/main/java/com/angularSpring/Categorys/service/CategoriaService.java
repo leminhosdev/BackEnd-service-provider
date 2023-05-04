@@ -5,6 +5,7 @@ import com.angularSpring.Categorys.dtos.CategoriaDTO;
 import com.angularSpring.Categorys.exceptions.ObjectNotFoundException;
 import com.angularSpring.Categorys.repositorys.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +40,16 @@ public class CategoriaService {
         cat.setDescrição(obj.getDescrição());
         return categoriaRepository.save(cat);
 
+
+    }
+
+    public void delete(Long id) {
+        findbyId(id);
+        try {
+            categoriaRepository.deleteById(id);
+        } catch (DataIntegrityViolationException e){
+            throw new com.angularSpring.Categorys.exceptions.DataIntegrityViolationException("Categoria não pdoe ser deletada");
+        }
 
     }
 }
