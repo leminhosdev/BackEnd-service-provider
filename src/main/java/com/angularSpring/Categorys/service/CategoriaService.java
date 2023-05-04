@@ -33,4 +33,12 @@ public class CategoriaService {
         return categoriaRepository.save(onj);
     }
 
+    public  Categoria create(Long id, CategoriaDTO obj){
+        Categoria cat = findbyId(id);
+        cat.setNome(obj.getNome());
+        cat.setDescrição(obj.getDescrição());
+        return categoriaRepository.save(cat);
+
+
+    }
 }
