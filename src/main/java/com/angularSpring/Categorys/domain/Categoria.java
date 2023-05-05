@@ -3,7 +3,9 @@ package com.angularSpring.Categorys.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.validator.constraints.Length;
 
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +23,11 @@ public class Categoria implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotEmpty(message = "esse nome não pode estar vazio")
+    @Length(min = 5, max = 100, message = "O campo deve ter entre 5 e 100 caracteres")
     private String nome;
-
+    @NotEmpty(message = "descrição vazia")
+    @Length(min = 5, max = 200, message = "O campo deve ter entre 5 e 200 caracteres")
     private String descrição;
     @OneToMany(mappedBy = "categoria")
     private List<Livro> livros = new ArrayList<>();

@@ -18,8 +18,8 @@ public class DbService {
 
     public void instanciaDB(){
 
-        Categoria cat1 = new Categoria( null, "dudu", "malah");
-        Livro livro = new Livro(null, "clena  code", "arquitertrua", "lorem", cat1);
+        Categoria cat1 = new Categoria( null, "dudueee", "malaheee");
+        Livro livro = new Livro(null, "clenaee  codeee", "arquitertruaee", "loremeee", cat1);
         cat1.getLivros().addAll(Arrays.asList(livro));
 
         this.categoriaRepository.saveAll(Arrays.asList(cat1));
