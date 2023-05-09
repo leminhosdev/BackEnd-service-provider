@@ -30,6 +30,7 @@ public class CategoriaResources {
         List<CategoriaDTO> listDTO = all.stream().map(obj -> new CategoriaDTO(obj)).collect(Collectors.toList());
         return ResponseEntity.ok().body(listDTO);
     }
+    @CrossOrigin("http://localhost:4200")
     @PostMapping
     public ResponseEntity<Categoria> create(@Valid @RequestBody Categoria obj){
     categoriaService.create(obj);
