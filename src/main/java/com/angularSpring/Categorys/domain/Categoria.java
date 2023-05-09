@@ -28,7 +28,7 @@ public class Categoria implements Serializable {
     private String nome;
     @NotEmpty(message = "descrição vazia")
     @Length(min = 5, max = 200, message = "O campo deve ter entre 5 e 200 caracteres")
-    private String descrição;
+    private String descricao;
     @OneToMany(mappedBy = "categoria")
     private List<Livro> livros = new ArrayList<>();
 
@@ -36,7 +36,7 @@ public class Categoria implements Serializable {
     public Categoria(Long id, String nome, String descrição) {
         this.id = id;
         this.nome = nome;
-        this.descrição = descrição;
+        this.descricao = descrição;
     }
 
     @Override

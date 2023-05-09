@@ -6,7 +6,6 @@ import com.angularSpring.Categorys.exceptions.ObjectNotFoundException;
 import com.angularSpring.Categorys.repositorys.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -37,7 +36,7 @@ public class CategoriaService {
     public  Categoria create(Long id, CategoriaDTO obj){
         Categoria cat = findbyId(id);
         cat.setNome(obj.getNome());
-        cat.setDescrição(obj.getDescrição());
+        cat.setDescricao(obj.getDescricao());
         return categoriaRepository.save(cat);
 
 
