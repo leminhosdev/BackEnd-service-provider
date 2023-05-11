@@ -30,3 +30,19 @@ link do repositório da parte FrontEnd: https://github.com/leminhosdev/Frontend-
  
  As validações, execeções estão cobertas pro Handlers, tais como a validação do registro ou update de um novo serviço.
  Estão organizado por pastas.
+
+
+# DEMO VIDEO 🎞
+Demonstração feita em vídeo da API https://youtu.be/tu361h9aiNc 🔊
+
+# Considerações finais 📈
+O projeto se trata de um protótipo, feito com a intenção de demonstrar conhecimentos de uma api por completo, backEnd e frontEnd, então segue à lista de pontos a melhorar em possíveis atualizações:
+
+- implementação de registro/login
+- funcionalidade de adicionar imagens
+
+
+# Stay stuned for news, and follow me here and in social midias or if you want to contact me: 🙋‍♂️
+- Linkedin :https://www.linkedin.com/in/lucas-lemos-b5879625b/
+- instagram: https://www.instagram.com/lucas_lemosl/
+- email: lucaslemos8294@gmail.com
