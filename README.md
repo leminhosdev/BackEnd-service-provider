@@ -26,7 +26,7 @@ link do repositório da parte FrontEnd: https://github.com/leminhosdev/Frontend-
  
   Springboot e seu ecossistema foram as principais ferramentas, Criei as entidades usando O jpa e pondo em prática a arquitetura MVC, usando dos repositórios, services e etc...
   
- # validações
+ # validações 🌏
  
  As validações, execeções estão cobertas pro Handlers, tais como a validação do registro ou update de um novo serviço.
  Estão organizado por pastas.
